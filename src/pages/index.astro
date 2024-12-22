@@ -38,6 +38,19 @@ const stack = [
     icon: "tailwind", 
     href: "https://tailwindcss.com" 
   },
+  { 
+    text: "Docker", 
+    icon: "docker", 
+    href: "https://www.docker.com/" 
+  },
+  {
+  text: "React",
+  icon: "react",
+  },
+  {
+  text: "Nodejs",
+  icon: "nodejs",
+  }
 ]
 ---
 
@@ -79,15 +92,31 @@ const stack = [
     <div class="animate absolute h-full w-full flex items-center justify-center">
       <div class='relative w-full h-full flex items-center justify-center'>
         <div class='p-5 text-center'>
-          <p class='animated text-lg md:text-xl lg:text-2xl font-semibold opacity-75'>
-            Hallo, Saya
-          </p>
-          <p class='animated text-2xl md:text-3xl lg:text-4xl font-bold uppercase text-black dark:text-white'>
-            Rasya Adrian
-          </p>
-          <p class='animated text-sm md:text-base lg:text-lg opacity-75'>
-            Sekarang bekerja sebagai web developer dan bug hunter.
-          </p>
+          <!-- fix this code -->
+          <img 
+          class="w-32 h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 rounded-full mx-auto" 
+          src="/rasya.png" 
+          alt="Foto Rasya Adrian" 
+          width="584" 
+          height="712"
+        />
+        
+        
+        
+        <!-- Greeting Text -->
+        <p class="animated py-2 sm:py-4 lg:py-5 text-lg md:text-xl lg:text-2xl font-semibold opacity-75">
+          Hallo, Saya
+        </p>
+        
+        <!-- Name -->
+        <p class="animated py-2 sm:py-4 lg:py-5 text-2xl md:text-3xl lg:text-4xl font-bold uppercase text-black dark:text-white">
+          Rasya Adrian
+        </p>
+        
+        <!-- Description -->
+        <p class="animated py-2 sm:py-3 lg:py-4 text-sm md:text-base lg:text-lg opacity-75">
+          Sekarang bekerja sebagai web developer dan bug hunter.
+        </p>
           <div id="ctaButtons" class='animated flex flex-wrap gap-4 justify-center mt-5'>
             <a href='/blog' class='py-2 px-4 rounded truncate text-xs md:text-sm lg:text-base bg-black dark:bg-white text-white dark:text-black hover:opacity-75 blend'>
               Baca blog saya
@@ -158,7 +187,7 @@ const stack = [
             Teknologi yang biasa saya gunakan, dan 
             <a href="" target="_blank" class="w-fit group underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
               <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
-                dotfiles
+                dotfiles saya
               </span>
             </a>
             
@@ -175,7 +204,7 @@ const stack = [
             </p>
             <a href="/projects" class="w-fit col-span-3 group flex gap-1 items-center underline decoration-[.5px] decoration-black/25 dark:decoration-white/50 hover:decoration-black dark:hover:decoration-white text-black dark:text-white underline-offset-2 blend">
               <span class="text-black/75 dark:text-white/75 group-hover:text-black group-hover:dark:text-white blend">
-                All projects
+                Semua Proyek Saya
               </span>
             </a>
           </div>
@@ -196,7 +225,7 @@ const stack = [
             Let's Connect
           </p>
           <p>
-            Reach out to me via email or on social media.
+            Hubungi saya melewati media social saya atau email saya.
           </p>
           <div class="grid grid-cols-4 gap-y-2 mt-4 auto-cols-min">
             {SOCIALS.map(social => (
