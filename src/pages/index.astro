@@ -7,10 +7,6 @@ import { SITE, SOCIALS } from "@consts"
 import TwinklingStars from "@components/TwinklingStars.astro"
 import MeteorShower from "@components/MeteorShower.astro"
 
-const posts = (await getCollection("blog"))
-  .filter(post => !post.data.draft)
-  .sort((a, b) => b.data.date.getTime() - a.data.date.getTime())
-  .slice(0,3)
 
 const projects = (await getCollection("projects"))
   .filter(project => !project.data.draft)
@@ -115,7 +111,7 @@ const stack = [
         
         <!-- Description -->
         <p class="animated py-2 sm:py-3 lg:py-4 text-sm md:text-base lg:text-lg opacity-75">
-          Sekarang bekerja sebagai web developer dan bug hunter.
+          Sekarang bekerja sebagai Freelance.
         </p>
           <div id="ctaButtons" class='animated flex flex-wrap gap-4 justify-center mt-5'>
             <a href='/blog' class='py-2 px-4 rounded truncate text-xs md:text-sm lg:text-base bg-black dark:bg-white text-white dark:text-black hover:opacity-75 blend'>
@@ -136,10 +132,10 @@ const stack = [
       <!-- About Section -->
       <section class="animate">
         <article>
-          <p>Saya adalah seorang <b><i>Programmer</i></b>, <b><i>Penetration tester</i></b> dan <b><i>foss enthusiast</i></b></p>
-          <p>Saya suka membuat kerajinan digital dan mencari sebuah bug di sebuah aplikasi.</p>
+          <p>Saya adalah seorang <b><i>Programmer</i></b>, <b><i>Graphic Designer</i></b> dan <b><i>Qa tester</i></b></p>
+          <p>Saya suka membuat kerajinan digital dan mengetest aplikasi client saya.</p>
           <p>Selama karier saya</p>
-          <p>Saya membuat produk seperti website dan maintance website tersebut, dan terkadang saya juga mencari sebuah bug di situs orang lain lalu melaporkan kepada sang pemilik situs tersebut .</p>
+          <p>Saya membuat produk seperti website dan Graphic design, dan terkadang saya juga bekerja sebagai QA tester untuk aplikasi client saya .</p>
           <p>Sekarang</p>
           <p>Saya adalah seorang freelancer.</p>
         </article>

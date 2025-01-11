@@ -33,44 +33,44 @@ export const SEARCH: Page = {
 
 // Links
 export const LINKS: Links = [
-  { 
-    TEXT: "Home", 
-    HREF: "/", 
+  {
+    TEXT: "Home",
+    HREF: "/",
   },
-  { 
-    TEXT: "Pekerjaan", 
-    HREF: "/work", 
+  {
+    TEXT: "Pekerjaan",
+    HREF: "/work",
   },
-  { 
-    TEXT: "Blog", 
+  {
+    TEXT: "Article",
     HREF: "/blog", // change this url to my blog cosmicraw
   },
-  { 
-    TEXT: "Projects", 
-    HREF: "/projects", 
+  {
+    TEXT: "Projects",
+    HREF: "/projects",
   },
 ]
 
 // Socials
 export const SOCIALS: Socials = [
-  { 
+  {
     NAME: "Email",
-    ICON: "email", 
+    ICON: "email",
     TEXT: "rasyaadrian1234@gmail.com",
     HREF: "rasyaadrian1234@gmail.com",
   },
-  { 
+  {
     NAME: "Github",
     ICON: "github",
     TEXT: "cosmicraw",
     HREF: "https://github.com/cosmicraw"
   },
-  { 
+  {
     NAME: "LinkedIn",
     ICON: "linkedin",
     TEXT: "Rasya Adrian",
     HREF: "https://www.linkedin.com/in/rasya-adrian-104a68275/",
   },
-  
+
 ]
 
