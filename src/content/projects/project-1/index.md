@@ -11,5 +11,4 @@ tags:
 demoUrl: https://cbt-sc23-1140.netlify.app/
 ---
 
-Pada project freelance pertama saya, saya membuat sebuah website sekolah menggunakan hugo,
-dan ini saya membuatnya dengan non profit.
+Ini adalah projek pertama freelance untuk membuat website sekolah saya dan ini saya membuatnya dengan non profit hanya untuk mencari pengalaman freelance saya.
