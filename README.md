@@ -1,55 +1,61 @@
 # pwtool
 
-CLI tool generator dan pemeriksa kekuatan password di Rust.
+A Rust CLI tool for generating passwords and checking password strength.
 
-## Fitur
+## Features
 
-- **Generator:**
-  - Panjang kustom (`-l`, `--length`, default: 16).
-  - Banyak output sekaligus (`-n`, `--count`).
-  - Opsi filter: `--no-upper`, `--no-lower`, `--no-numbers`, `--no-symbols`.
-  - Hindari karakter ambigu (`--no-ambiguous`: `0`, `O`, `1`, `I`, `l`, `|`).
-  - Auto-copy ke clipboard (`-c`, `--copy`) + auto-clear countdown (`--clear-after`).
-- **Strength Checker:**
-  - Analisis via argumen langsung atau mode interaktif (`-i`, `--interactive`).
-  - Deteksi pola umum, dictionary attack, pengulangan via algoritma `zxcvbn`.
-  - Perhitungan entropi teoretis vs entropi efektif.
-  - Estimasi waktu retas (asumsi 10 miliar tebakan/detik cluster GPU).
-  - Peringatan dan saran perbaikan spesifik.
+* **Generator:**
 
-## Instalasi & Build
+  * Custom length (`-l`, `--length`, default: 16).
+  * Generate multiple passwords at once (`-n`, `--count`).
+  * Character pool filters: `--no-upper`, `--no-lower`, `--no-numbers`, `--no-symbols`.
+  * Exclude ambiguous characters (`--no-ambiguous`): `0`, `O`, `1`, `I`, `l`, `|`.
+  * Auto-copy to clipboard (`-c`, `--copy`) with an automatic clear countdown (`--clear-after`).
+* **Strength Checker:**
+
+  * Analyze passwords through direct arguments or interactive mode (`-i`, `--interactive`).
+  * Detect common patterns, dictionary attacks, and repetitions using the `zxcvbn` algorithm.
+  * Calculate theoretical entropy versus effective entropy.
+  * Estimate cracking time based on an assumption of 10 billion guesses per second using a GPU cluster.
+  * Provide warnings and specific recommendations for improving password strength.
+
+## Installation & Build
 
 ```bash
 cargo build --release
 ```
 
-Binary tersimpan di `target/release/pwtool`.
+The binary will be located at:
 
-## Penggunaan
+```text
+target/release/pwtool
+```
 
-### 1. Generate Password
+## Usage
+
+### 1. Generate Passwords
 
 ```bash
-# Default (16 karakter, semua pool aktif)
+# Default (16 characters, all character pools enabled)
 pwtool generate
 
-# Panjang 24 karakter, 5 baris
+# Generate 5 passwords, each 24 characters long
 pwtool generate -l 24 -n 5
 
-# Tanpa simbol dan karakter ambigu (mudah dibaca)
+# Exclude symbols and ambiguous characters (easier to read)
 pwtool generate --no-symbols --no-ambiguous
 
-# Salin ke clipboard dan hapus otomatis setelah 10 detik
+# Copy to clipboard and automatically clear it after 10 seconds
 pwtool generate -c --clear-after 10
 ```
 
-### 2. Cek Kekuatan Password
+### 2. Check Password Strength
 
 ```bash
-# Cek via argumen
+# Check via command-line argument
 pwtool check "Tr0ub4dor&3"
 
-# Cek interaktif (password tidak tampil di layar/history shell)
+# Interactive mode (password is not displayed on screen or stored in shell history)
 pwtool check -i
 ```
 
